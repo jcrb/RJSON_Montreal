@@ -1,0 +1,21 @@
+---
+title: "Arrets de bus de la ville de Montreal"
+author: "jcb"
+date: "3 avril 2015"
+output: html_document
+---
+
+Note: voir la librairie R Markdown qui permet la transformation d'un document markdown en un autre format dont __Beamer__.
+
+```{r init}
+library(rjson)
+library(jsonlite)
+
+
+path <- "../"
+file <- paste0(path, "data/bus_stop.json")
+
+d <- fromJSON(file)
+names(d)
+```
+
